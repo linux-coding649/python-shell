@@ -78,11 +78,11 @@ logout
 
 
 def main():
-    user = os.getlogin()
-    hostname = platform.node()
-    pwddir = os.getcwd()
     while True:
-        inp = input(user+"@"+hostname+":"+pwddir+"$ ")
+        user = os.getlogin()
+        hostname = platform.node()
+        pwddir = os.getcwd()
+        inp = input(user+"@"+hostname+":"+pwddir+" $ ")
         if inp == "exit" or inp == "logout":
             break
         elif inp[:3] == "cd ":
